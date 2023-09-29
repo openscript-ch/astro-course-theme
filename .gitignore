@@ -16,3 +16,5 @@ pnpm-debug.log*
 
 # Vitest
 __coverage__/
+
+.pnpm-store
