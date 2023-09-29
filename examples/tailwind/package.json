@@ -11,8 +11,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.10.2",
-    "@astrojs/starlight-tailwind": "^2.0.0",
+    "@openscript-ch/astro-course-theme": "workspace:*",
+    "@openscript-ch/astro-course-theme-tailwind": "workspace:*",
     "@astrojs/tailwind": "^5.0.0",
     "astro": "^3.0.6",
     "sharp": "^0.32.5",

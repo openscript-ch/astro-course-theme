@@ -1,5 +1,5 @@
 {
-  "name": "@astrojs/starlight-tailwind",
+  "name": "@openscript-ch/astro-course-theme-tailwind",
   "version": "2.0.0",
   "description": "Tailwind CSS plugin for the Starlight documentation theme for Astro",
   "author": "Chris Swithinbank <swithinbank@gmail.com>",
