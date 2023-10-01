@@ -50,13 +50,13 @@ jobs:
         run: pnpm i
 
       - name: Build docs site
-        working-directory: ./docs
+        working-directory: ./examples/basics
         run: pnpm build
         env:
           NO_GRADIENTS: true
 
       - name: Run accessibility audit
-        working-directory: ./docs
+        working-directory: ./examples/basics
         run: pnpm t
 
   windows-smoke:
