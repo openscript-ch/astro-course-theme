@@ -1,5 +1,11 @@
 # @astrojs/starlight-tailwind
 
+## 2.0.1
+
+### Patch Changes
+
+- [`c342f0d`](https://github.com/withastro/starlight/commit/c342f0d6ee735e4ddf281fbcfb5e7fa7c5d1e4f7) Thanks [@openscript](https://github.com/openscript)! - First publication to registry
+
 ## 2.0.0
 
 ### Major Changes
