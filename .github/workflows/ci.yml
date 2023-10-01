@@ -30,35 +30,6 @@ jobs:
       - name: Test packages
         run: pnpm -r test:coverage
 
-  pa11y:
-    name: Check for accessibility issues
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v2
-
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'pnpm'
-
-      - name: Install Dependencies
-        run: pnpm i
-
-      - name: Build docs site
-        working-directory: ./docs
-        run: pnpm build
-        env:
-          NO_GRADIENTS: true
-
-      - name: Run accessibility audit
-        working-directory: ./docs
-        run: pnpm t
-
   windows-smoke:
     name: Docs site builds on Windows
     runs-on: windows-latest
@@ -71,5 +42,5 @@ jobs:
           cache: 'pnpm'
       - run: pnpm i
       - name: Build docs site
-        working-directory: ./docs
+        working-directory: ./examples/basics
         run: pnpm build

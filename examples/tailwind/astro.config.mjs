@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import starlight from '@openscript-ch/astro-course-theme';
 import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
