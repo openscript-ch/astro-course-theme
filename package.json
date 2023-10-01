@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "build:ghpages": "pnpm --filter '@example/starlight-basics' build",
     "build:examples": "pnpm --filter '@example/*' build",
     "size": "size-limit",
     "version": "pnpm changeset version && pnpm i --no-frozen-lockfile",
