@@ -42,9 +42,7 @@ jobs:
         run: pnpm i
 
       - name: Build
-        run: pnpm build:ghpages \
-            --site "${{ steps.pages.outputs.origin }}" \
-            --base "${{ steps.pages.outputs.base_path }}"
+        run: pnpm build:ghpages --site "${{ steps.pages.outputs.origin }}" --base "${{ steps.pages.outputs.base_path }}"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
