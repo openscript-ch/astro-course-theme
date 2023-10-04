@@ -11,7 +11,7 @@ import plugin from 'tailwindcss/plugin';
  * @example
  * // tailwind.config.cjs
  * const colors = require('tailwindcss/colors');
- * const starlightPlugin = require('@astrojs/starlight/tailwind');
+ * const starlightPlugin = require('@openscript-ch/astro-course-theme/tailwind');
  *
  * module.exports = {
  *   plugins: [

@@ -23,16 +23,16 @@ export default function StarlightIntegration(opts: StarlightUserConfig): AstroIn
 	const userConfig = parsedConfig.data;
 
 	const Starlight: AstroIntegration = {
-		name: '@astrojs/starlight',
+		name: '@openscript-ch/astro-course-theme',
 		hooks: {
 			'astro:config:setup': ({ config, injectRoute, updateConfig }) => {
 				injectRoute({
 					pattern: '404',
-					entryPoint: '@astrojs/starlight/404.astro',
+					entryPoint: '@openscript-ch/astro-course-theme/404.astro',
 				});
 				injectRoute({
 					pattern: '[...slug]',
-					entryPoint: '@astrojs/starlight/index.astro',
+					entryPoint: '@openscript-ch/astro-course-theme/index.astro',
 				});
 				const newConfig: AstroUserConfig = {
 					vite: {

@@ -1,4 +1,4 @@
-# <img src="https://github.com/withastro/starlight/assets/357379/494fcd83-42aa-4891-87e0-87402fa0b6f3" alt="" align="left" width="40" height="40"> @astrojs/starlight-tailwind
+# <img src="https://github.com/withastro/starlight/assets/357379/494fcd83-42aa-4891-87e0-87402fa0b6f3" alt="" align="left" width="40" height="40"> @openscript-ch/astro-course-theme-tailwind
 
 Tailwind CSS plugin for the [Starlight][starlight] documentation theme for [Astro][astro].
 
