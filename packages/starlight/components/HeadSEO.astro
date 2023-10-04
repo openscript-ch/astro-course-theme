@@ -24,7 +24,7 @@ const headDefaults: z.input<ReturnType<typeof HeadConfigSchema>> = [
 		attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1' },
 	},
 	{ tag: 'title', content: title },
-	{ tag: 'base', attrs: { href: import.meta.env.BASE_URL } },
+	{ tag: 'base', attrs: { href: canonical?.href } },
 	{ tag: 'link', attrs: { rel: 'canonical', href: canonical?.href } },
 	// Favicon
 	{
