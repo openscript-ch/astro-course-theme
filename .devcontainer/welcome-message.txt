@@ -1,7 +1,7 @@
 Next steps:
 
   - Develop the theme:
-    cd examples/basic && pnpm dev --host
+    pnpm dev
 
   - Run tests:
     cd packages/starlight && pnpm test
