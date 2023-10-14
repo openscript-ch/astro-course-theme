@@ -1,5 +1,5 @@
 {
-  "name": "Contribute to Starlight",
+  "name": "astro-course-theme",
   "build": {
     "dockerfile": "Dockerfile"
   },
@@ -7,10 +7,16 @@
   "waitFor": "postCreateCommand",
   "customizations": {
     "codespaces": {
-      "openFiles": ["CONTRIBUTING.md"]
+      "openFiles": [
+        "CONTRIBUTING.md"
+      ]
     },
     "vscode": {
-      "extensions": ["astro-build.astro-vscode", "esbenp.prettier-vscode"]
+      "extensions": [
+        "astro-build.astro-vscode",
+        "esbenp.prettier-vscode",
+        "unifiedjs.vscode-mdx"
+      ]
     }
   }
 }

@@ -5,9 +5,9 @@ import starlight from '@openscript-ch/astro-course-theme';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'New course',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/openscript-ch/astro-course-theme',
 			},
 			sidebar: [
 				{

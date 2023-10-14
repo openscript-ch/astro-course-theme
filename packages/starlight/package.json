@@ -17,11 +17,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/withastro/starlight",
+    "url": "https://github.com/openscript-ch/astro-course-theme",
     "directory": "packages/starlight"
   },
-  "bugs": "https://github.com/withastro/starlight/issues",
-  "homepage": "https://starlight.astro.build",
+  "bugs": "https://github.com/openscript-ch/astro-course-theme/issues",
+  "homepage": "https://openscript-ch.github.io/astro-course-theme",
   "type": "module",
   "exports": {
     ".": "./index.ts",
