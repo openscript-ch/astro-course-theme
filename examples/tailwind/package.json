@@ -14,7 +14,7 @@
     "@openscript-ch/astro-course-theme": "workspace:*",
     "@openscript-ch/astro-course-theme-tailwind": "workspace:*",
     "@astrojs/tailwind": "^5.0.0",
-    "astro": "^3.2.1",
+    "astro": "^3.2.3",
     "sharp": "^0.32.5",
     "tailwindcss": "^3.3.3"
   }
