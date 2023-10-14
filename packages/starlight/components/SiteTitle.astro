@@ -3,6 +3,7 @@ import { logos } from 'virtual:starlight/user-images';
 import config from 'virtual:starlight/user-config';
 import { pathWithBase } from '../utils/base';
 import type { Props } from '../props';
+import { Icon } from '../components';
 
 const href = pathWithBase(Astro.props.locale || '/');
 ---
@@ -30,6 +31,9 @@ const href = pathWithBase(Astro.props.locale || '/');
 				)}
 			</>
 		)
+	}
+	{
+		!config.logo && <Icon name='openscript' size="2em" />
 	}
 	<span class:list={{ 'sr-only': config.logo?.replacesTitle }}>
 		{config.title}
