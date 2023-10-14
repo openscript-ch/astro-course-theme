@@ -31,9 +31,9 @@
 	--sl-color-red: hsl(var(--sl-hue-red), 82%, 63%);
 	--sl-color-red-high: hsl(var(--sl-hue-red), 82%, 87%);
 
-	--sl-color-accent-low: hsl(224, 54%, 20%);
-	--sl-color-accent: hsl(224, 100%, 60%);
-	--sl-color-accent-high: hsl(224, 100%, 85%);
+	--sl-color-accent-low: #4a8247;
+	--sl-color-accent: #539350;
+	--sl-color-accent-high: #5ca459;
 
 	--sl-color-text: var(--sl-color-gray-2);
 	--sl-color-text-accent: var(--sl-color-accent-high);
@@ -140,9 +140,9 @@
 	--sl-color-red: hsl(var(--sl-hue-red), 90%, 60%);
 	--sl-color-red-low: hsl(var(--sl-hue-red), 80%, 90%);
 
-	--sl-color-accent-high: hsl(234, 80%, 30%);
-	--sl-color-accent: hsl(234, 90%, 60%);
-	--sl-color-accent-low: hsl(234, 88%, 90%);
+	--sl-color-accent-low: #4a8247;
+	--sl-color-accent: #539350;
+	--sl-color-accent-high: #5ca459;
 
 	--sl-color-text-accent: var(--sl-color-accent);
 	--sl-color-text-invert: var(--sl-color-black);
