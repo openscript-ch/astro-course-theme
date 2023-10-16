@@ -1,5 +1,11 @@
 # @astrojs/starlight-tailwind
 
+## 2.2.0
+
+### Minor Changes
+
+- [`3d2c96e`](https://github.com/withastro/starlight/commit/3d2c96eb051f68ce45b59cbcb9e69f7bb5f4dd16) Thanks [@openscript](https://github.com/openscript)! - Enhance colors and searchbar
+
 ## 2.1.0
 
 ### Minor Changes
