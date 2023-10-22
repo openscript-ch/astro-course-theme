@@ -1,5 +1,11 @@
 # @astrojs/starlight
 
+## 0.12.2
+
+### Patch Changes
+
+- [`e64e584`](https://github.com/withastro/starlight/commit/e64e58471e016fbd122b968fe622abd4a7591642) Thanks [@openscript](https://github.com/openscript)! - Enhance squares component
+
 ## 0.12.1
 
 ### Patch Changes
