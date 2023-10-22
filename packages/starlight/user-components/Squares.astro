@@ -1,0 +1,27 @@
+---
+const { size } = Astro.props;
+---
+
+<style define:vars={{size}}>
+  div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  div > :global(*) {
+    margin: 0 !important;
+    height: var(--size);
+    width: var(--size);
+    display: flex;
+  }
+
+  div :global(img) {
+    max-width: 100%;
+    width: auto;
+  }
+</style>
+
+<div class="horizontal-blocks">
+  <slot />
+</div>
