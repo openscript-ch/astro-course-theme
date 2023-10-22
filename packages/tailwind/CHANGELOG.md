@@ -1,5 +1,11 @@
 # @astrojs/starlight-tailwind
 
+## 2.2.1
+
+### Patch Changes
+
+- [`2bdc269`](https://github.com/withastro/starlight/commit/2bdc26985ea138b98f204b5b6366713f0191fc73) Thanks [@openscript](https://github.com/openscript)! - Add squares component
+
 ## 2.2.0
 
 ### Minor Changes
