@@ -9,14 +9,14 @@ const { size } = Astro.props;
     gap: 1rem;
   }
 
-  div > * {
-    margin: 0;
+  div > :global(*) {
+    margin: 0 !important;
     height: var(--size);
     width: var(--size);
     display: flex;
   }
 
-  div img {
+  div :global(img) {
     max-width: 100%;
     width: auto;
   }
