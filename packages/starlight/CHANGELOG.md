@@ -1,5 +1,13 @@
 # @astrojs/starlight
 
+## 0.12.3
+
+### Patch Changes
+
+- [`f91d500`](https://github.com/withastro/starlight/commit/f91d5006ad1e4f9e649b19705a1df1b6fc587650) Thanks [@openscript](https://github.com/openscript)! - Fix theme selector width
+
+- [`fa5f3b9`](https://github.com/withastro/starlight/commit/fa5f3b9320a5dc6f53d0775f922d367dee471830) Thanks [@openscript](https://github.com/openscript)! - Tune markdown lists
+
 ## 0.12.2
 
 ### Patch Changes
