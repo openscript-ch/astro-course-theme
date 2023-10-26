@@ -9,11 +9,11 @@ import plugin from 'tailwindcss/plugin';
  * - Links Starlight’s fonts to `sans` and `mono` in Tailwind theme settings.
  *
  * @example
- * // tailwind.config.cjs
- * const colors = require('tailwindcss/colors');
- * const starlightPlugin = require('@openscript-ch/astro-course-theme/tailwind');
+ * // tailwind.config.mjs
+ * import colors from 'tailwindcss/colors';
+ * import starlightPlugin from '@openscript-ch/astro-course-theme/tailwind';
  *
- * module.exports = {
+ * export default {
  *   plugins: [
  *     // Add Starlight’s Tailwind plugin
  *     starlightPlugin(),
