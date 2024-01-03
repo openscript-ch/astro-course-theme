@@ -1,11 +1,11 @@
 ---
 import { logos } from 'virtual:starlight/user-images';
 import config from 'virtual:starlight/user-config';
-import { pathWithBase } from '../utils/base';
 import type { Props } from '../props';
 import { Icon } from '../components';
+import { formatPath } from '../utils/format-path';
 
-const href = pathWithBase(Astro.props.locale || '/');
+const href = formatPath(Astro.props.locale || '/');
 ---
 
 <a {href} class="site-title sl-flex">
@@ -13,7 +13,7 @@ const href = pathWithBase(Astro.props.locale || '/');
 		config.logo && logos.dark && (
 			<>
 				<img
-					class:list={{ 'dark-only': !('src' in config.logo) }}
+					class:list={{ 'light:sl-hidden': !('src' in config.logo) }}
 					alt={config.logo.alt}
 					src={logos.dark.src}
 					width={logos.dark.width}
@@ -22,7 +22,7 @@ const href = pathWithBase(Astro.props.locale || '/');
 				{/* Show light alternate if a user configure both light and dark logos. */}
 				{!('src' in config.logo) && (
 					<img
-						class="light-only"
+						class="dark:sl-hidden"
 						alt={config.logo.alt}
 						src={logos.light?.src}
 						width={logos.light?.width}
@@ -59,11 +59,5 @@ const href = pathWithBase(Astro.props.locale || '/');
 		max-width: 100%;
 		object-fit: contain;
 		object-position: 0 50%;
-	}
-	:global([data-theme='light']) .dark-only {
-		display: none;
-	}
-	:global([data-theme='dark']) .light-only {
-		display: none;
 	}
 </style>

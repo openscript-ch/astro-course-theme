@@ -17,4 +17,7 @@ pnpm-debug.log*
 # Vitest
 __coverage__/
 
+# Vercel output
+.vercel
+
 .pnpm-store
