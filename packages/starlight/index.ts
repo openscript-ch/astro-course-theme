@@ -41,11 +41,11 @@ export default function StarlightIntegration({
 
 				injectRoute({
 					pattern: '404',
-					entryPoint: '@openscript-ch/astro-course-theme/404.astro',
+					entrypoint: '@openscript-ch/astro-course-theme/404.astro',
 				});
 				injectRoute({
 					pattern: '[...slug]',
-					entryPoint: '@openscript-ch/astro-course-theme/index.astro',
+					entrypoint: '@openscript-ch/astro-course-theme/index.astro',
 				});
 				// Add built-in integrations only if they are not already added by the user through the
 				// config or by a plugin.
