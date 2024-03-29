@@ -212,7 +212,7 @@ export const starlightExpressiveCode = ({
 				}),
 				preprocessComponentConfig: `
 					import starlightConfig from 'virtual:starlight/user-config'
-					import { useTranslations, getStarlightEcConfigPreprocessor } from '@astrojs/starlight/internal'
+					import { useTranslations, getStarlightEcConfigPreprocessor } from '@openscript-ch/astro-course-theme/internal'
 
 					export default getStarlightEcConfigPreprocessor({ starlightConfig, useTranslations })
 				`,
