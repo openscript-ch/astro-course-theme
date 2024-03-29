@@ -20,9 +20,9 @@ jobs:
     name: Run unit tests
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'pnpm'
@@ -34,9 +34,9 @@ jobs:
     name: Docs site builds on Windows
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'pnpm'
@@ -44,3 +44,5 @@ jobs:
       - name: Build docs site
         working-directory: ./examples/basics
         run: pnpm build
+        env:
+          CHECK_LINKS: true
