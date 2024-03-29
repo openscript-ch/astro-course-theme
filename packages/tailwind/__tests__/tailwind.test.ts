@@ -39,7 +39,7 @@ describe('@tailwind base;', async () => {
 			    --tw-content: ;
 			}
 			:root {
-			    --sl-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+			    --sl-font: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 			    --sl-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 			    --sl-color-white: #fff;
 			    --sl-color-gray-1: #e5e7eb;
@@ -107,7 +107,7 @@ describe('@tailwind base;', async () => {
 			    --tw-content: ;
 			}
 			:root {
-			    --sl-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+			    --sl-font: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 			    --sl-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 			    --sl-color-white: #fff;
 			    --sl-color-gray-1: #e5e7eb;
@@ -183,6 +183,10 @@ describe('@tailwind base;', async () => {
 			    --tw-backdrop-opacity:  ;
 			    --tw-backdrop-saturate:  ;
 			    --tw-backdrop-sepia:  ;
+			    --tw-contain-size:  ;
+			    --tw-contain-layout:  ;
+			    --tw-contain-paint:  ;
+			    --tw-contain-style:  ;
 			}
 			::backdrop {
 			    --tw-border-spacing-x: 0;
@@ -232,6 +236,10 @@ describe('@tailwind base;', async () => {
 			    --tw-backdrop-opacity:  ;
 			    --tw-backdrop-saturate:  ;
 			    --tw-backdrop-sepia:  ;
+			    --tw-contain-size:  ;
+			    --tw-contain-layout:  ;
+			    --tw-contain-paint:  ;
+			    --tw-contain-style:  ;
 			}"
 		`);
 	});
@@ -243,9 +251,9 @@ describe('@tailwind utilities;', () => {
 			css: '@tailwind utilities;',
 			html: '<div class="dark:text-red-50"></div>',
 		});
-		expect(utils).includes('[data-theme="dark"] .dark');
+		expect(utils).includes('[data-theme="dark"] *');
 		expect(utils).toMatchInlineSnapshot(`
-			":is([data-theme="dark"] .dark\\:text-red-50) {
+			".dark\\:text-red-50:is([data-theme="dark"] *) {
 			    --tw-text-opacity: 1;
 			    color: rgb(254 242 242 / var(--tw-text-opacity))
 			}"
