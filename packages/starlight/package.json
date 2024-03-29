@@ -1,6 +1,6 @@
 {
   "name": "@openscript-ch/astro-course-theme",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "description": "Build beautiful, high-performance course content websites with Astro",
   "scripts": {
     "test": "vitest",

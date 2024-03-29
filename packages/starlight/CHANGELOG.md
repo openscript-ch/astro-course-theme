@@ -1,5 +1,11 @@
 # @astrojs/starlight
 
+## 0.14.0
+
+### Minor Changes
+
+- [`06eed600da3521e19e7dcf8192b4067c6ce6cc18`](https://github.com/withastro/starlight/commit/06eed600da3521e19e7dcf8192b4067c6ce6cc18) Thanks [@openscript](https://github.com/openscript)! - Upgrade from upstream
+
 ## 0.21.2
 
 ### Patch Changes
@@ -216,9 +222,9 @@
   If you want to preserve the previous, buggy styling, you can add the following custom CSS to your site:
 
   ```css
-  starlight-toc a[aria-current='true'],
-  starlight-toc a[aria-current='true']:hover,
-  starlight-toc a[aria-current='true']:focus {
+  starlight-toc a[aria-current="true"],
+  starlight-toc a[aria-current="true"]:hover,
+  starlight-toc a[aria-current="true"]:focus {
     font-weight: 600;
     color: var(--sl-color-text-invert);
     background-color: var(--sl-color-text-accent);
@@ -290,8 +296,8 @@
   If you want to preserve previous behaviour, disable link prefetching in `astro.config.mjs`:
 
   ```js
-  import { defineConfig } from 'astro/config';
-  import starlight from '@astrojs/starlight';
+  import { defineConfig } from "astro/config";
+  import starlight from "@astrojs/starlight";
 
   export default defineConfig({
     // Disable link prefetching:
@@ -629,16 +635,16 @@
 
   ```css
   :root {
-  	--sl-hue-accent: 234;
-  	--sl-color-accent-low: hsl(var(--sl-hue-accent), 54%, 20%);
-  	--sl-color-accent: hsl(var(--sl-hue-accent), 100%, 60%);
-  	--sl-color-accent-high: hsl(var(--sl-hue-accent), 100%, 87%);
+    --sl-hue-accent: 234;
+    --sl-color-accent-low: hsl(var(--sl-hue-accent), 54%, 20%);
+    --sl-color-accent: hsl(var(--sl-hue-accent), 100%, 60%);
+    --sl-color-accent-high: hsl(var(--sl-hue-accent), 100%, 87%);
   }
 
-  :root[data-theme='light'] {
-  	--sl-color-accent-high: hsl(var(--sl-hue-accent), 80%, 30%);
-  	--sl-color-accent: hsl(var(--sl-hue-accent), 90%, 60%);
-  	--sl-color-accent-low: hsl(var(--sl-hue-accent), 88%, 90%);
+  :root[data-theme="light"] {
+    --sl-color-accent-high: hsl(var(--sl-hue-accent), 80%, 30%);
+    --sl-color-accent: hsl(var(--sl-hue-accent), 90%, 60%);
+    --sl-color-accent-low: hsl(var(--sl-hue-accent), 88%, 90%);
   }
   ```
 
@@ -1017,8 +1023,8 @@
 
   ```json
   {
-  	"search.label": "Suchen",
-  	"search.shortcutLabel": "(Drücke / zum Suchen)"
+    "search.label": "Suchen",
+    "search.shortcutLabel": "(Drücke / zum Suchen)"
   }
   ```
 
