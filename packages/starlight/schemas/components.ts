@@ -209,7 +209,7 @@ export function ComponentConfigSchema() {
 			 */
 			DraftContentNotice: z
 				.string()
-				.default('@astrojs/starlight/components/DraftContentNotice.astro'),
+				.default('@openscript-ch/astro-course-theme/components/DraftContentNotice.astro'),
 
 			/**
 			 * Component rendered at the top of the page when `hero` is set in frontmatter. The default

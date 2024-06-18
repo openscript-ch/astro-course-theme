@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@astrojs/starlight": "workspace:*",
+    "@openscript-ch/astro-course-theme": "workspace:*",
     "astro": "^4.10.2"
   }
 }
