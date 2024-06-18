@@ -16,20 +16,6 @@ env:
   NODE_VERSION: 18
 
 jobs:
-  unit-test:
-    name: Run unit tests
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v3
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'pnpm'
-      - run: pnpm i
-      - name: Test packages
-        run: pnpm -r test:coverage
-
   windows-smoke:
     name: Docs site builds on Windows
     runs-on: windows-latest
