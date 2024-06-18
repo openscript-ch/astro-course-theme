@@ -17,6 +17,7 @@ test('parses valid config successfully', () => {
 		  "components": {
 		    "Banner": "@openscript-ch/astro-course-theme/components/Banner.astro",
 		    "ContentPanel": "@openscript-ch/astro-course-theme/components/ContentPanel.astro",
+		    "DraftContentNotice": "@openscript-ch/astro-course-theme/components/DraftContentNotice.astro",
 		    "EditLink": "@openscript-ch/astro-course-theme/components/EditLink.astro",
 		    "FallbackContentNotice": "@openscript-ch/astro-course-theme/components/FallbackContentNotice.astro",
 		    "Footer": "@openscript-ch/astro-course-theme/components/Footer.astro",
@@ -43,6 +44,7 @@ test('parses valid config successfully', () => {
 		    "ThemeSelect": "@openscript-ch/astro-course-theme/components/ThemeSelect.astro",
 		    "TwoColumnContent": "@openscript-ch/astro-course-theme/components/TwoColumnContent.astro",
 		  },
+		  "credits": false,
 		  "customCss": [],
 		  "defaultLocale": {
 		    "dir": "ltr",
@@ -58,6 +60,7 @@ test('parses valid config successfully', () => {
 		  },
 		  "head": [],
 		  "isMultilingual": false,
+		  "isUsingBuiltInDefaultLocale": true,
 		  "lastUpdated": false,
 		  "locales": undefined,
 		  "pagefind": true,
@@ -66,7 +69,9 @@ test('parses valid config successfully', () => {
 		    "maxHeadingLevel": 3,
 		    "minHeadingLevel": 2,
 		  },
-		  "title": "",
+		  "title": {
+		    "en": "",
+		  },
 		  "titleDelimiter": "|",
 		}
 	`);
@@ -80,12 +85,13 @@ test('errors if title is missing', () => {
 		"[AstroUserError]:
 			Invalid config passed to starlight integration
 		Hint:
-			**title**: Required"
-	`
+			**title**: Did not match union.
+			> Required"
+		`
 	);
 });
 
-test('errors if title value is not a string', () => {
+test('errors if title value is not a string or an Object', () => {
 	expect(() =>
 		parseStarlightConfigWithFriendlyErrors({ title: 5 } as any)
 	).toThrowErrorMatchingInlineSnapshot(
@@ -93,7 +99,8 @@ test('errors if title value is not a string', () => {
 		"[AstroUserError]:
 			Invalid config passed to starlight integration
 		Hint:
-			**title**: Expected type \`"string"\`, received \`"number"\`"
+			**title**: Did not match union.
+			> Expected type \`"string" | "object"\`, received \`"number"\`"
 	`
 	);
 });
@@ -106,7 +113,7 @@ test('errors with bad social icon config', () => {
 		"[AstroUserError]:
 			Invalid config passed to starlight integration
 		Hint:
-			**social.unknown**: Invalid enum value. Expected 'twitter' | 'mastodon' | 'github' | 'gitlab' | 'bitbucket' | 'discord' | 'gitter' | 'codeberg' | 'codePen' | 'youtube' | 'threads' | 'linkedin' | 'twitch' | 'microsoftTeams' | 'instagram' | 'stackOverflow' | 'x.com' | 'telegram' | 'rss' | 'facebook' | 'email' | 'reddit' | 'patreon' | 'slack' | 'matrix' | 'openCollective', received 'unknown'
+			**social.unknown**: Invalid enum value. Expected 'twitter' | 'mastodon' | 'github' | 'gitlab' | 'bitbucket' | 'discord' | 'gitter' | 'codeberg' | 'codePen' | 'youtube' | 'threads' | 'linkedin' | 'twitch' | 'microsoftTeams' | 'instagram' | 'stackOverflow' | 'x.com' | 'telegram' | 'rss' | 'facebook' | 'email' | 'reddit' | 'patreon' | 'signal' | 'slack' | 'matrix' | 'openCollective' | 'hackerOne' | 'blueSky' | 'discourse' | 'zulip', received 'unknown'
 			**social.unknown**: Invalid url"
 	`
 	);

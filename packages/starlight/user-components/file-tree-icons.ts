@@ -113,6 +113,7 @@ export const definitions: Definitions = {
 	extensions: {
 		'.astro': 'astro',
 		'.mdx': 'mdx',
+		'.pkl': 'pkl',
 		'.bsl': 'seti:bsl',
 		'.mdo': 'seti:mdo',
 		'.cls': 'seti:salesforce',
@@ -339,6 +340,7 @@ export const definitions: Definitions = {
 		'.ttf': 'seti:font',
 		'.woff': 'seti:font',
 		'.woff2': 'seti:font',
+		'.otf': 'seti:font',
 		'.avif': 'seti:image',
 		'.gif': 'seti:image',
 		'.jpg': 'seti:image',

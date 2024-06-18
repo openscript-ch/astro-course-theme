@@ -3,12 +3,11 @@ import { logos } from 'virtual:starlight/user-images';
 import config from 'virtual:starlight/user-config';
 import type { Props } from '../props';
 import { Icon } from '../components';
-import { formatPath } from '../utils/format-path';
 
-const href = formatPath(Astro.props.locale || '/');
+const { siteTitle, siteTitleHref } = Astro.props;
 ---
 
-<a {href} class="site-title sl-flex">
+<a href={siteTitleHref} class="site-title sl-flex">
 	{
 		config.logo && logos.dark && (
 			<>
@@ -36,7 +35,7 @@ const href = formatPath(Astro.props.locale || '/');
 		!config.logo && <Icon name='openscript' size="2em" />
 	}
 	<span class:list={{ 'sr-only': config.logo?.replacesTitle }}>
-		{config.title}
+		{siteTitle}
 	</span>
 </a>
 

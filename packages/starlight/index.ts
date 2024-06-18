@@ -10,6 +10,7 @@ import { vitePluginStarlightUserConfig } from './integrations/virtual-user-confi
 import { rehypeRtlCodeSupport } from './integrations/code-rtl-support';
 import { createTranslationSystemFromFs } from './utils/translations-fs';
 import { runPlugins, type StarlightUserConfigWithPlugins } from './utils/plugins';
+import { processI18nConfig } from './utils/i18n';
 import type { StarlightConfig } from './types';
 
 export default function StarlightIntegration({
@@ -28,18 +29,25 @@ export default function StarlightIntegration({
 				logger,
 				updateConfig,
 			}) => {
-				// Run plugins to get the final configuration and any extra Astro integrations to load.
-				const { integrations, starlightConfig } = await runPlugins(opts, plugins, {
+				// Run plugins to get the updated configuration and any extra Astro integrations to load.
+				const pluginResult = await runPlugins(opts, plugins, {
 					command,
 					config,
 					isRestart,
 					logger,
 				});
+				// Process the Astro and Starlight configurations for i18n and translations.
+				const { astroI18nConfig, starlightConfig } = processI18nConfig(
+					pluginResult.starlightConfig,
+					config.i18n
+				);
+
+				const { integrations } = pluginResult;
 				userConfig = starlightConfig;
 
 				const useTranslations = createTranslationSystemFromFs(starlightConfig, config);
 
-				if (!userConfig.disable404Route) {
+				if (!starlightConfig.disable404Route) {
 					injectRoute({
 						pattern: '404',
 						entrypoint: '@openscript-ch/astro-course-theme/404.astro',
@@ -63,10 +71,17 @@ export default function StarlightIntegration({
 					integrations.push(starlightSitemap(starlightConfig));
 				}
 				if (!allIntegrations.find(({ name }) => name === '@astrojs/mdx')) {
-					integrations.push(mdx());
+					integrations.push(mdx({ optimize: true }));
 				}
+
+				// Add integrations immediately after Starlight in the config array.
+				// e.g. if a user has `integrations: [starlight(), tailwind()]`, then the order will be
+				// `[starlight(), expressiveCode(), sitemap(), mdx(), tailwind()]`.
+				// This ensures users can add integrations before/after Starlight and we respect that order.
+				const selfIndex = config.integrations.findIndex((i) => i.name === '@astrojs/starlight');
+				config.integrations.splice(selfIndex + 1, 0, ...integrations);
+
 				updateConfig({
-					integrations,
 					vite: {
 						plugins: [vitePluginStarlightUserConfig(starlightConfig, config)],
 					},
@@ -85,6 +100,7 @@ export default function StarlightIntegration({
 					experimental: {
 						globalRoutePriority: true,
 					},
+					i18n: astroI18nConfig,
 				});
 			},
 

@@ -21,3 +21,5 @@ __coverage__/
 .vercel
 
 .pnpm-store
+# Created by @astrojs/check
+/src/
